@@ -10,12 +10,18 @@ public:
 	void handleInput(float dt) override;
 	void update(float dt);
 	void render();
-
+	
 private:
+	// Methods
+	void spawnFood();
 	// Default functions for rendering to the screen.
 	float m_speed = 200.f;
+	float m_timer = 0.0f;
+	int m_score = 0;
 	// Default variables for level class.
 	sf::CircleShape m_player;
+	sf::CircleShape m_food;
+	bool m_IsGameOver = false;
 private:
 	enum class direction{UP, DOWN, LEFT, RIGHT};
 	direction m_directon;
