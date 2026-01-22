@@ -13,7 +13,10 @@ public:
 
 private:
 	// Default functions for rendering to the screen.
-
+	float m_speed = 200.f;
 	// Default variables for level class.
-	
+	sf::CircleShape m_player;
+private:
+	enum class direction{UP, DOWN, LEFT, RIGHT};
+	direction m_directon;
 };
